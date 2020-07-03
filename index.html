@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin</title>
+    <link rel = "icon" href="assets/logo.png" type = "image/x-icon"> 
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+<div>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+            <div class="logo">
+                <li>
+            <a href="#"><img src="assets/logo.png" width="36" height="36" style="margin-top: 2px;"></a>
+            </li>
+        </div>
+        <div class="serch">
+            <div class="search-icon">
+                <span class="fas fa-search"></span>
+            </div>
+            <div class="cancel-icon">
+                <span class="fas fa-times"></span>
+            </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" >
+            <button type="submit" class="fas fa-search"></button>
+        </form>  
+        </div>
+
+
+        <div class="nav-items" >
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true" style="margin-top: 12px;"></i></a></i></li>
+            <li><a href="#"><i class="fa fa-users" aria-hidden="true" style="margin-top: 12px;"></i></a></li>
+            <li><a href="#"><i class="fa fa-briefcase" aria-hidden="true" style="margin-top: 12px;"></i></a></li>
+            <li><a href="#"><i class="fa fa-inbox" aria-hidden="true" style="margin-top: 12px; size: 90px;"></i></a></li>
+            <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true" style="margin-top: 12px;"></i></i></a></li><hr style="height: auto;">
+            <li><a href="#"><i class="fa fa-building" aria-hidden="true" style="margin-top: 12px;"></i></a></li>
+            <li><div style="color :rgb(215, 202, 162)!important  "><a href="#" style="color: rgb(220,206,164);">Try Premium Free <br> for 1 Month</a></div></li>
+        </div>
+    </nav>
+    
+</div>
+<div class="flex-container">
+    <div style="margin-left: 110px; width: 215px; height: 362px; border-radius: 2px;">
+    <div></div>
+    </div>
+    <div  style=" width: 550px; height: 562px; border-radius: 2px;">
+    <div class="main"></div>
+    </div>
+    <div  style="margin-right: 110px; width: 310px; height: 362px; border-radius: 2px;"></div>  
+</div>
+<script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+  </script>
+
+  </body>
+</html>
